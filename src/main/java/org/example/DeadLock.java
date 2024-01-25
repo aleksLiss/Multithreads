@@ -1,9 +1,9 @@
 package org.example;
 
 public class DeadLock {
-    public final static Object obj1 = new Object();
-    public final static Object obj2 = new Object();
-    public static final class Example implements Runnable{
+    private final static Object obj1 = new Object();
+    private final static Object obj2 = new Object();
+    private static final class Example implements Runnable{
         @Override
         public void run() {
             synchronized (DeadLock.obj1){
@@ -14,7 +14,7 @@ public class DeadLock {
             }
         }
     }
-    public static final class Example2 implements Runnable{
+    private static final class Example2 implements Runnable{
         @Override
         public void run() {
             synchronized (DeadLock.obj2){
