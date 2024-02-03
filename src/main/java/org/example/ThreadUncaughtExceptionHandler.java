@@ -2,7 +2,7 @@ package org.example;
 
 import static java.lang.Thread.*;
 
-public class MyThreadUncaughtExceptionHandler {
+public class ThreadUncaughtExceptionHandler {
 
     public static void main(String[] args) {
 
