@@ -7,19 +7,20 @@ import java.util.concurrent.ThreadFactory;
 public class CreateThreads {
 
     public static void main(String[] args) {
+        // Method 1
         ThreadExtThread thread1 = new ThreadExtThread();
         thread1.start();
-
-        ThreadImplRunnable threadImplRunnable = new ThreadImplRunnable();
+        // Method 2
+        ThreadImplRunnable runnable = new ThreadImplRunnable();
         Thread thread2 = new Thread(threadImplRunnable);
         thread2.start();
 
-
+        //Method 3
         ThreadFactory myThreadFactory = new MyThreadFactory();
         Thread thread3 = myThreadFactory.newThread(new ThreadImplRunnable());
         thread3.start();
 
-
+        //Method 4
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         executorService.submit(new ThreadImplRunnable());
 
