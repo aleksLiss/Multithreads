@@ -1,3 +1,1 @@
----
 Cheat-sheet about Multithreading
----
