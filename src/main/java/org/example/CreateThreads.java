@@ -12,7 +12,7 @@ public class CreateThreads {
         thread1.start();
         // Method 2
         ThreadImplRunnable runnable = new ThreadImplRunnable();
-        Thread thread2 = new Thread(threadImplRunnable);
+        Thread thread2 = new Thread(runnable);
         thread2.start();
 
         //Method 3
